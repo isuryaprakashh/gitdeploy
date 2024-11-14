@@ -1,10 +1,59 @@
-<html>
-  <head>
-    <title>How to deploy</title>
-<link rel="stylesheet" href="web.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KLU SGPA & CGPA Calculator</title>
+  <link rel="stylesheet" href="web.css">
 </head>
-  <body>
-    <h1>Welcome to my website</h1>
-    <h6>This is Surya Prakash</h6>
-  </body>
+<body>
+  <div class="container">
+    <h1>KLU SGPA & CGPA Calculator</h1>
+    
+    <label for="calculator">Select Calculator:</label>
+    <select id="calculator">
+      <option value="SGPA">SGPA Calculator</option>
+      <option value="CGPA">CGPA Calculator</option>
+    </select>
+
+    <div id="sgpa-calculator" class="calculator-section">
+      <h2>SGPA Calculator</h2>
+      <div id="courses">
+        <div class="course">
+          <label for="grade-point">Grade Points:</label>
+          <input type="number" class="grade-point" placeholder="Enter grade points">
+          
+          <label for="credits">Credits:</label>
+          <input type="number" class="credits" placeholder="Enter credits">
+          
+          <button class="delete-course">Delete</button>
+        </div>
+      </div>
+      <button id="add-course">Add Course</button>
+      <button id="calculate-sgpa">Calculate SGPA</button>
+      <h3>SGPA: <span id="sgpa-result">0.00</span></h3>
+    </div>
+    
+    <div id="cgpa-calculator" class="calculator-section" style="display: none;">
+      <h2>CGPA Calculator</h2>
+      <div id="cgpa-courses">
+        <div class="course">
+          <label for="cgpa-grade-point">Grade Points:</label>
+          <input type="number" class="cgpa-grade-point" placeholder="Enter grade points">
+          
+          <label for="cgpa-credits">Credits:</label>
+          <input type="number" class="cgpa-credits" placeholder="Enter credits">
+          
+          <button class="delete-course">Delete</button>
+        </div>
+      </div>
+      <button id="add-cgpa-course">Add Course</button>
+      <button id="calculate-cgpa">Calculate CGPA</button>
+      <h3>CGPA: <span id="cgpa-result">0.00</span></h3>
+      <h3>Percentage: <span id="cgpa-percentage">0.00</span>%</h3>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
